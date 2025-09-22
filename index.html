@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Issues of Citizens to Government — Awareness & Reporting</title>
+  <style>
+    :root{
+      --bg:#f6f8fb; --card:#ffffff; --accent:#2b6cb0; --muted:#6b7280;
+      --radius:12px; --glass: rgba(255,255,255,0.7);
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:linear-gradient(180deg,#eef3fb,#f6f8fb); color:#111}
+    header{background:var(--card); padding:28px 20px; display:flex; align-items:center; gap:18px; box-shadow:0 6px 20px rgba(16,24,40,0.06)}
+    header h1{margin:0; font-size:20px; color:var(--accent)}
+    .container{max-width:980px; margin:28px auto; padding:0 18px}
+    .grid{display:grid; grid-template-columns: 1fr 360px; gap:20px}
+    @media(max-width:880px){.grid{grid-template-columns:1fr} .sidebar{order:2}}
+
+    .card{background:var(--card); border-radius:var(--radius); padding:18px; box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+    .lead{color:var(--muted); font-size:14px; margin-top:6px}
+
+    /* Issues list */
+    .issues .issue{border-left:4px solid var(--accent); padding:12px 14px; margin-bottom:12px; border-radius:8px; background:linear-gradient(90deg, rgba(43,108,176,0.04), rgba(255,255,255,0));}
+    .issue h3{margin:0 0 4px 0; font-size:16px}
+    .issue p{margin:0; font-size:13px; color:var(--muted)}
+
+    /* Accordion for details */
+    details{margin-top:12px}
+    summary{cursor:pointer; font-weight:600}
+    .steps{margin-top:10px; padding-left:16px}
+
+    /* Sidebar */
+    .sidebar .small{font-size:13px; color:var(--muted)}
+    .report-btn{display:inline-block; background:var(--accent); color:#fff; padding:10px 14px; border-radius:10px; text-decoration:none; margin-top:10px}
+
+    /* Form */
+    form label{display:block; font-size:13px; margin-top:10px}
+    input[type=text], input[type=email], textarea, select{width:100%; padding:10px; border-radius:8px; border:1px solid #e6e9ef; margin-top:6px}
+    textarea{min-height:120px; resize:vertical}
+    .row{display:flex; gap:12px}
+    .row .col{flex:1}
+
+    .actions{display:flex; gap:10px; align-items:center; margin-top:12px}
+    .btn{padding:10px 14px; border-radius:10px; border:0; cursor:pointer}
+    .btn.primary{background:var(--accent); color:#fff}
+    .btn.ghost{background:transparent; border:1px solid #e6e9ef}
+
+    footer{margin:28px auto; text-align:center; color:var(--muted); font-size:13px}
+
+    /* subtle helpers */
+    .tag{display:inline-block; font-size:12px; padding:6px 8px; border-radius:999px; background:rgba(43,108,176,0.08); color:var(--accent)}
+  </style>
+</head>
+<body>
+  <header>
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden><rect width="24" height="24" rx="6" fill="#eef6ff"/><path d="M4 12h16M8 6v12" stroke="#2b6cb0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div>
+      <h1>Citizens → Government: Issues, Awareness & Reporting</h1>
+      <div class="lead">A simple, accessible informational page that helps citizens learn common issues, their rights, and how to report concerns to government bodies.</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+      <section class="card main">
+        <h2>Common issues citizens raise</h2>
+        <p class="lead">Below are typical categories of public concerns and practical next steps you can take.</p>
+
+        <div class="issues">
+          <article class="issue">
+            <h3>Public services & utilities</h3>
+            <p>Problems with water supply, electricity, road maintenance or waste collection that affect neighbourhoods.</p>
+            <details>
+              <summary>What to do</summary>
+              <ol class="steps">
+                <li>Document the issue with photos, dates, and affected address.</li>
+                <li>Check your local civic portal for complaint tracking or helpline numbers.</li>
+                <li>If no response, escalate to local councillor or ombudsman with your documentation.</li>
+              </ol>
+            </details>
+          </article>
+
+          <article class="issue">
+            <h3>Corruption & transparency</h3>
+            <p>Concerns about misuse of public funds, bribery or lack of transparency in contracts and decisions.</p>
+            <details>
+              <summary>What to do</summary>
+              <ol class="steps">
+                <li>Collect any verifiable evidence and note dates, people involved and transactions.</li>
+                <li>File a complaint with anti-corruption agencies or use RTI/FOI requests where available.</li>
+                <li>Speak with journalists, CSOs, or public-interest lawyers if the issue is systemic.</li>
+              </ol>
+            </details>
+          </article>
+
+          <article class="issue">
+            <h3>Access to healthcare & education</h3>
+            <p>Lack of access to medicines, qualified staff, or poor infrastructure in public hospitals and schools.</p>
+            <details>
+              <summary>What to do</summary>
+              <ol class="steps">
+                <li>Collect records (receipts, appointment logs) and speak to facility managers.</li>
+                <li>Contact the district health/education office and submit a written complaint.</li>
+                <li>Use social media responsibly to highlight urgent problems — include facts and avoid unverified claims.</li>
+              </ol>
+            </details>
+          </article>
+
+          <article class="issue">
+            <h3>Safety & law enforcement</h3>
+            <p>Problems such as delayed response, harassment, or police misconduct.</p>
+            <details>
+              <summary>What to do</summary>
+              <ol class="steps">
+                <li>Prioritize safety — call emergency services if immediate danger exists.</li>
+                <li>File an FIR/official report; keep copies. Note names, badge numbers, vehicle IDs where possible.</li>
+                <li>Approach human-rights commissions or legal aid clinics for guidance on escalation.</li>
+              </ol>
+            </details>
+          </article>
+
+          <article class="issue">
+            <h3>Environment & public health</h3>
+            <p>Air/water pollution, illegal dumping, and other hazards affecting community health.</p>
+            <details>
+              <summary>What to do</summary>
+              <ol class="steps">
+                <li>Gather evidence (photos, dates, medical reports if relevant).</li>
+                <li>Report to pollution control boards or local environmental departments.</li>
+                <li>Engage local NGOs to monitor and pressure authorities for remedial action.</li>
+              </ol>
+            </details>
+          </article>
+        </div>
+
+        <hr style="margin:18px 0" />
+
+        <h3>How to make an effective complaint</h3>
+        <ol>
+          <li>Be factual: include dates, locations, names and evidence.</li>
+          <li>Use official channels first — many governments track and resolve tickets.</li>
+          <li>Keep copies of every communication and note the complaint/ticket number.</li>
+          <li>Escalate politely if deadlines pass — refer to earlier ticket numbers and include new evidence.</li>
+        </ol>
+
+        <details style="margin-top:12px">
+          <summary>Sample complaint template</summary>
+          <pre style="background:#f7fafc;padding:12px;border-radius:8px;margin-top:10px;font-size:13px">To: [Department/Official]\nSubject: Complaint regarding [short description]\n\nI am writing to report [detailed description with dates, address, and evidence].\n\nAttachments: [photos, receipts, medical reports]\n\nPlease provide a ticket/reference number and an expected timeline for resolution.\n\nSincerely,\n[Your name] — [Contact number/email]</pre>
+        </details>
+
+      </section>
+
+      <aside class="card sidebar">
+        <div>
+          <div class="tag">Quick actions</div>
+          <p class="small" style="margin-top:8px">Report a problem or download a printable complaint form below.</p>
+          <a class="report-btn" id="openReport">Report an issue</a>
+        </div>
+
+        <hr style="margin:14px 0" />
+
+        <div>
+          <h4>Resources</h4>
+          <ul style="padding-left:18px;color:var(--muted);font-size:14px">
+            <li>Local civic portal / e-governance website</li>
+            <li>Anti-corruption / ombudsman office</li>
+            <li>Legal aid clinics & public-interest NGOs</li>
+            <li>Health & emergency hotlines</li>
+          </ul>
+        </div>
+
+        <hr style="margin:14px 0" />
+
+        <div>
+          <h4>Report form</h4>
+          <form id="reportForm">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" placeholder="Optional" />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" />
+
+            <label for="category">Category</label>
+            <select id="category" name="category">
+              <option>Public services</option>
+              <option>Corruption</option>
+              <option>Healthcare/Education</option>
+              <option>Safety</option>
+              <option>Environment</option>
+              <option>Other</option>
+            </select>
+
+            <label for="details">Short description</label>
+            <textarea id="details" name="details" placeholder="Describe the issue with dates/locations"></textarea>
+
+            <div class="actions">
+              <button type="button" class="btn primary" id="submitBtn">Preview</button>
+              <button type="reset" class="btn ghost">Reset</button>
+            </div>
+
+            <p id="preview" style="margin-top:10px;color:var(--muted);font-size:13px;display:none"></p>
+          </form>
+        </div>
+      </aside>
+
+    </div>
+
+    <footer>
+      This page is an educational template and does not file complaints for you. Always use your official local government channels when available.
+    </footer>
+  </main>
+
+  <script>
+    // Small interactive behaviours: open form, preview content and copy template
+    document.getElementById('openReport').addEventListener('click', function(){
+      window.scrollTo({top: document.getElementById('reportForm').offsetTop - 60, behavior:'smooth'});
+      document.getElementById('details').focus();
+    });
+
+    document.getElementById('submitBtn').addEventListener('click', function(){
+      var name = document.getElementById('name').value || 'Anonymous';
+      var email = document.getElementById('email').value || 'Not provided';
+      var cat = document.getElementById('category').value;
+      var details = document.getElementById('details').value.trim();
+      if(!details){ alert('Please provide a short description of the issue.'); return; }
+      var preview = `Preview:\nName: ${name}\nEmail: ${email}\nCategory: ${cat}\nDescription: ${details}`;
+      var p = document.getElementById('preview');
+      p.style.display = 'block';
+      p.textContent = preview;
+      // Offer to copy to clipboard
+      if(navigator.clipboard){
+        navigator.clipboard.writeText(preview).then(function(){
+          p.textContent += '\n\n(Preview copied to clipboard — you can paste it into an official portal or email.)';
+        }).catch(function(){ /* ignore */ });
+      }
+    });
+  </script>
+</body>
+</html>
