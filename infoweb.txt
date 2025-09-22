@@ -1,1 +1,3 @@
-hello
+The created web application is helpful for:
+1) All citizens who are facing issues can directly send report to the government.
+2)By using this web application the citizens can prove that they registered the report they are facing to the government an dif the government reacted then it is well and good if not then the citizens will have proof to file a complaint against the government.
